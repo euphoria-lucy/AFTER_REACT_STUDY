@@ -20,16 +20,22 @@ const Header = () => {
 };
 
 function App() {
+  const buttonProps = { text: "news", color: "lightsteelblue", a: 1, b: 2 };
+
   return (
     <>
+      <Button {...buttonProps} />
       <h1>react start</h1>
       <Header />
       <Main />
       <Footer />
-      <Button text={"CLOVER"} color={"lightgreen"} />
+      <Button text={"CLOVER"} color={"lightgreen"}>
+        <div>자식</div>
+      </Button>
       <Button text={"LUCKY"} color={"lavender"} />
       <Button text={"LOVE"} color={"lavenderblush"} />
       <Button />
+      <Button text={"shopping"} color={"orange"} a={1} b={2} />
     </>
   );
 }
